@@ -5,11 +5,13 @@ import imageio
 import exifread
 import sys
 import piexif
+import os
+from optparse import OptionParser
 
 
 class VikkiImageConverter:
     def __init__(self, s_file_name, d_file_name):
-        print('starting ')
+        print('Processing file {}'.format(s_file_name))
         self.s_filename = s_file_name
         self.d_filename = d_file_name
         self.exif_dict = piexif.load(s_file_name)
@@ -21,11 +23,8 @@ class VikkiImageConverter:
 
     def write_image(self):
         new_dict = self.create_dic('0th', self.list_1)
-        print(new_dict)
         new_dictt = self.create_dic('Exif', self.list_2)
-        print(new_dictt)
         final_dic = {**new_dict, **new_dictt}
-        print(final_dic)
         exif_bytes = piexif.dump(final_dic)
         piexif.insert(exif_bytes, self.d_filename)
 
@@ -43,8 +42,8 @@ class VikkiImageConverter:
     def raw_jpg(self):
         with rawpy.imread(self.s_filename) as raw:
             rgb = raw.postprocess()
-        imageio.imsave(self.d_filename, rgb)
-        self.write_image()
+            imageio.imsave(self.d_filename, rgb)
+            self.write_image()
 
 
 def print_tag(nef_file):
@@ -55,6 +54,62 @@ def print_tag(nef_file):
             print("{}: {}".format(tag, tags[tag]))
 
 
-p1 = VikkiImageConverter('/home/vikki/Downloads/blog/test1.nef', '/home/vikki/Downloads/blog/default11.jpg')
-p1.raw_jpg()
+def absolutefilepaths(directory):
+    for dirpath, _, filenames in os.walk(directory):
+        for f in filenames:
+            if f.endswith('.nef'):
+                yield os.path.abspath(os.path.join(dirpath, f))
+
+
+def getfiles(file_list, destination_path):
+    for i in file_list:
+        source_file = i
+        destination_file_name = i.split(".nef")
+        destination_file_name = destination_file_name[0].split("/")
+        destination_file_name = destination_file_name[-1] + ".jpg"
+        destination_file_name = os.path.join(destination_path, destination_file_name)
+        p1 = VikkiImageConverter(source_file, destination_file_name)
+        p1.raw_jpg()
+
+
+def vikk_help():
+    usage = "usage: %prog [options] arg"
+    description = "convert image"
+    parser = OptionParser(usage=usage, description=description)
+    parser.add_option("-s", "--source", dest="source", default="no", action="store", help="source folder or file")
+    parser.add_option("-d", "--destination", dest="destination", default="no", action="store",
+                      help="destination folder or file")
+    (options, args) = parser.parse_args()
+
+    if (options.source or options.destination) is None:
+        parser.print_help()
+        sys.exit(2)
+    if os.path.isfile(options.destination):
+        print("Destination should always be a directory")
+        sys.exit(2)
+    if not os.path.isdir(options.destination):
+        print("Destination doesn't exit")
+        sys.exit(2)
+
+    if not os.path.isfile(options.source):
+        if not os.path.isdir(options.source):
+            print("Source/destination not found or improper usage")
+            sys.exit(2)
+    return options.source, options.destination
+
+
+(source, destination) = vikk_help()
+
+
+if os.path.isdir(source):
+    file_list = absolutefilepaths(source)
+    getfiles(file_list, destination)
+else:
+    destination_filename = source.split(".nef")
+    destination_filename = destination_filename[0].split("/")
+    destination_filename = os.path.join(destination, destination_filename[-1] + ".jpg")
+
+    p1 = VikkiImageConverter(source, destination_filename)
+    p1.raw_jpg()
+
 sys.exit(0)
