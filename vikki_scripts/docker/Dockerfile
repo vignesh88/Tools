@@ -18,4 +18,4 @@ ADD tools /django/tools/
 
 # Install vim
 RUN apt-get update -y
-RUN apt-get install gdal-bin libgdal-dev vim  -y
+RUN apt-get install gdal-bin libgdal-dev vim  -y --no-install-recommends

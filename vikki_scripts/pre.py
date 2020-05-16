@@ -1,6 +1,4 @@
 from pytube import YouTube
-import os
-import sys
 from progress.bar import Bar
 import threading
 import tkinter as tk

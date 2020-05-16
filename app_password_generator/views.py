@@ -1,10 +1,9 @@
 from django.shortcuts import render
-from django.http import  HttpResponse, JsonResponse
+from django.http import  JsonResponse
 import string
 import random
 import json
 import nltk
-import secrets
 from nltk.corpus import wordnet as wn
 
 # Create your views here.
