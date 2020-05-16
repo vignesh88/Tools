@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="author" content="Vignesh Ragupathy">
+  <meta name="keywords" content="vikki, vignesh ragupathy, vikki's tools">
+  <meta name="description" content="Opensource tools developed by Vignesh Ragupathy">
+  <title>Vikki's tools</title><!-- Bootstrap core CSS -->
+  <link href="{% static 'common/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="{% static 'general/img/favicon.ico' %}"/> 
+  <link href="{% static 'common/css/common.css' %}" rel="stylesheet"><!-- Custom styles for this template -->
+  <link href="{% static 'common/css/simple-sidebar.css' %}" rel="stylesheet">
+  <script src="{% static 'common/js/jquery.min.js' %}"></script>
+<script src="{% static 'common/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'common/js/darkmode-js.min.js' %}"></script>
+<script src="{% static 'common/js/common.js' %}"></script>
+<script src="{% static 'common/js/superplaceholder.js' %}"></script>
+  <!--
+  <link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/general/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/general/css/general.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/general/css/simple-sidebar.css" rel="stylesheet">
+  -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75997179-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-75997179-2');
+</script>
+
+
+</head>
+
+<body>{% include 'home.html' %}</body>
+
+</html>

@@ -1,0 +1,73 @@
+{% load static %}
+
+<link href="{% static 'base64/css/base64.css' %}" rel="stylesheet">
+<script src="{% static 'common/js/js.cookie.min.js' %}"></script>
+
+
+<!--
+  <link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/base64/css/base64.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+-->
+
+
+<div  class="container-fluid" id="slow_loading">
+  
+  
+  <div class="container_1">
+    <!-- <h1 class="mt-4">base64 encoding and decoding</h1> -->
+    <h2 class="title" style="color:#6C757D">Base64 Encode and Decode</h2>
+    <!-- <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p> -->
+    <div class="container my-5"></div>
+    <form action = "" method="post">
+      {% csrf_token %}
+      <div class="form-group ">
+        <!--  <label for="inputdefault">Inputs</label> -->
+        
+          <span class="tools-field-title">Input</span>
+        
+        <div id="vikki_input_box" class="mb-3">
+        <input onkeypress="return base64_convert_enterkey(event)" class="form-control" id="default_input_data"
+          type="text" placeholder="Enter the data...">
+      </div>
+      
+      <p>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+            <input type="radio"  id="base64_encode" autocomplete="off" checked> ENCODE
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" id="base64_decode" autocomplete="off"> DECODE
+          </label>
+        </div>
+      </p>
+      
+      <div class="form-group">
+        <!-- <label for="inputdefault">Results</label>  -->
+        <label for="inputdefault"></label>
+        
+          <span class="tools-field-title">Results</span>
+        
+        <div id="vikki_input_box" class="mb-3">
+        <input onClick="copyToClipboard('results','#show_copied')" class="form-control" type="text" id="results"
+          placeholder="Converted results appears here..." readonly> <span id="show_copied" class="show-copied"> copied successfuly!</span> </div>
+          
+          
+          
+          
+            
+        
+      </div>
+      <br>
+      <!-- <button onclick="base64_convert()" type="button" class="btn btn-success btn-lg btn-block">Convert</button> -->
+      <button onclick="base64_convert()" type="button" class="btn btn-lg btn-block btn-secondary">Convert</button>
+    </form>
+  </div>
+  <footer>Made with ❤️ by <a href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta"> Vikki.</a></footer>
+</div><!-- /container -->
+
+  
+ 
+<script src="{% static 'base64/js/base64.js' %}"></script>
+<!--
+  <script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/base64/js/base64.js"></script>
+-->
