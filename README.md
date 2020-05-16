@@ -1,4 +1,5 @@
 # Vikki's Tools
+[![Build Status](https://travis-ci.org/vignesh88/Tools.svg?branch=master)](https://travis-ci.org/vignesh88/Tools)
 
 ### To generate a new secreat key for django
 ```
