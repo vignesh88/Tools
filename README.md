@@ -3,14 +3,12 @@
 
 ### To generate a new secreat key for django
 ```
-from django.core.management.utils import get_random_secret_key
-get_random_secret_key()
+#python manage.py shell
+In [1]: from django.core.management.utils import get_random_secret_key
+In [2]: get_random_secret_key()
+Out[2]: '555%s(xc)a4-^x*3ipd@_@z81n_mry#flyx9@boy0b@jeg_4ao'
+
 ```
-
-
-
-
-
 
 ### External libraries used
 
