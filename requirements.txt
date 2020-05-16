@@ -2,4 +2,4 @@ Django
 psycopg2
 #geoip2
 nltk
-decouple
+python-decouple
