@@ -23,28 +23,30 @@ Out[2]: '555%s(xc)a4-^x*3ipd@_@z81n_mry#flyx9@boy0b@jeg_4ao'
 ```
 #sudo docker run -d -p 8086:8086 --name vikki_tools vignesh88/tools python epoch/manage.py runserver 0.0.0.0:8086
 ```
+> Open your browser and view the application at [http://localhost:8086](http://localhost:8086)
 
 ### External libraries used
 
-Javascript
-----------
-- [superplaceholder](https://github.com/chinchang/superplaceholder.js)
-- [JS Cookie](https://github.com/js-cookie/js-cookie)
-- bootstrap.bundle.min
-- jquery.min.js
-- darkmode-js.min.js
-- moment.min.js
-- moment-timezone.js
-- moment-timezone-with-data-2012-2022.js
-- chosen.jquery.js
-- jstz.min.js
-- bootstrap.bundle.min.js
+- Javascript
+    - [superplaceholder](https://github.com/chinchang/superplaceholder.js)
+    - [JS Cookie](https://github.com/js-cookie/js-cookie)
+    - bootstrap.bundle.min
+    - jquery.min.js
+    - darkmode-js.min.js
+    - moment.min.js
+    - moment-timezone.js
+    - moment-timezone-with-data-2012-2022.js
+    - chosen.jquery.js
+    - jstz.min.js
+    - bootstrap.bundle.min.js
 
-CSS
--------
-- bootstrap.min.css
-- simple-sidebar.css
-- bootstrap-datetimepicker.min.css
-- bootstrap-datetimepicker.min.js
-- bootstrap-select.min.css
-- bootstrap-select.min.js
+- CSS
+    - bootstrap.min.css
+    - simple-sidebar.css
+    - bootstrap-datetimepicker.min.css
+    - bootstrap-datetimepicker.min.js
+    - bootstrap-select.min.css
+    - bootstrap-select.min.js
+
+### License
+GNU General Public License v3.0 - read the LICENSE file for details.
