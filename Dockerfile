@@ -18,6 +18,7 @@ ADD requirements.txt /django/
 # Install our requirements.
 RUN pip install -r requirements.txt
 COPY . /django/tools/
+COPY /django/tools/.env.example /django/tools/.env
 
 # Install vim
 RUN apt-get update -y
