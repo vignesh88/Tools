@@ -1,4 +1,5 @@
 # Vikki's Tools
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/62d245757a5d4a8e97b2174dc9a56406)](https://app.codacy.com/manual/vignesh88/tools?utm_source=github.com&utm_medium=referral&utm_content=vignesh88/tools&utm_campaign=Badge_Grade_Dashboard)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/952302021f24459db9987eda6fc552bb)](https://app.codacy.com/manual/me_188/Tools?utm_source=github.com&utm_medium=referral&utm_content=vignesh88/Tools&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/vignesh88/Tools.svg?branch=master)](https://travis-ci.org/vignesh88/Tools)
 
