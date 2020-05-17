@@ -1,6 +1,8 @@
 # Vikki's Tools
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/62d245757a5d4a8e97b2174dc9a56406)](https://app.codacy.com/manual/vignesh88/tools?utm_source=github.com&utm_medium=referral&utm_content=vignesh88/tools&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://travis-ci.org/vignesh88/Tools.svg?branch=master)](https://travis-ci.org/vignesh88/Tools)
+[![Build Status](https://travis-ci.org/vignesh88/Tools.svg?branch=master)](https://travis-ci.org/vignesh88/Tools) 
+[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/vikki/Vikki's%20tools%2FVikki's%20tools?key=eyJhbGciOiJIUzI1NiJ9.NWVjMGU3ZTU2MTllYjZmNTYxYTRjYWIy.fSVMhnKfcSepXilVqCA1AY7vocNQ6s3Xkm-pSKB4zt4&type=cf-1)]( https%3A%2F%2Fg.codefresh.io%2Fpipelines%2FVikki's%20tools%2Fbuilds%3Ffilter%3Dtrigger%3Abuild~Build%3Bpipeline%3A5ec0ed5b1350575c3a125e3f~Vikki's%20tools)
+
 
 ### To generate a new secreat key for django
 ```
