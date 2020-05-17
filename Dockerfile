@@ -13,10 +13,10 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /django
 RUN mkdir /django/tools
 WORKDIR /django
-ADD requirements.txt /django/
+ADD requirements.txt /django/tools/
 
 # Install our requirements.
-RUN pip install -r requirements.txt
+RUN pip install -r /django/tools/requirements.txt
 COPY .env.example /django/tools/.env
 COPY . /django/tools/
 RUN chmod +x /django/tools/start.sh

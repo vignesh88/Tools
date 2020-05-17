@@ -10,6 +10,17 @@ In [2]: get_random_secret_key()
 Out[2]: '555%s(xc)a4-^x*3ipd@_@z81n_mry#flyx9@boy0b@jeg_4ao'
 
 ```
+### Installation
+```
+#git clone https://github.com/vignesh88/tools.git
+#cd tools/
+#python manage.py runserver 0.0.0.0:8086
+```
+
+### Alternate installation using docker
+```
+#sudo docker run -d -p 8086:8086 --name vikki_tools vignesh88/tools python epoch/manage.py runserver 0.0.0.0:8086
+```
 
 ### External libraries used
 
