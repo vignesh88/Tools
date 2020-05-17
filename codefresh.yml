@@ -34,6 +34,7 @@ steps:
     image: "ubuntu:latest" # The image in which command will be executed
     working_directory: "${{clone}}" # Running command where code cloned
     commands:
+      - apt-get update -y && apt-get install python -y --no-install-recommends
       - "ls"
       - "python manage.py test"
     stage: "test"
