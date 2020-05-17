@@ -19,6 +19,7 @@ ADD requirements.txt /django/
 RUN pip install -r requirements.txt
 COPY .env.example /django/tools/.env
 COPY . /django/tools/
+RUN chmod +x /django/tools/start.sh
 
 
 # Install vim
@@ -26,4 +27,4 @@ RUN apt-get update -y
 RUN apt-get install gdal-bin libgdal-dev vim  -y --no-install-recommends
 
 # command executed at run
-CMD ["python", "tools/manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["tools/start.sh"]

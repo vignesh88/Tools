@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'ec2-3-16-143-224.us-east-2.compute.amazonaws.com', 'www.vikki.in', 'tools.vikki.in', '3.16.143.224']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
