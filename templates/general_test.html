@@ -1,0 +1,16 @@
+{% load static %}
+<link href="{% static 'general/css/general.css' %}" rel="stylesheet" />
+<div class="container-fluid" id="slow_loading_general"><br />
+  <div id="tools_links" style="text-align:center"><a class="button_tools_links" href="Javascript:void(0);" id="pass_gen"
+      style="background-color:#5a5f63">Password Generator</a> <a class="button_tools_links" href="Javascript:void(0);"
+      id="base_64" style="background-color:#5a5f63">Base64 encode/decode</a> <a class="button_tools_links"
+      href="Javascript:void(0);" id="geo_ip" style="background-color:#5a5f63">What is my IP</a> <a
+      class="button_tools_links" href="Javascript:void(0);" id="epoch" style="background-color:#5a5f63">Epoch
+      converter</a></div>
+  <div id="div1"></div>
+</div><!-- /container -->
+<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/general/js/general.js"></script>
+<!--
+  <script src="{% static 'general/js/general.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/general/js/general.js"></script>
+-->
