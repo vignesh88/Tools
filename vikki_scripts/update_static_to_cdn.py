@@ -72,8 +72,8 @@ def update_link_to_static(files):
 
 for files in source_files:
 	print("Parsing HTML {}.html ...".format(files))
-	update_script_to_cdn(files)
-	update_link_to_cdn(files)
-	#update_script_to_static(files)
-	#update_link_to_static(files)
+	#update_script_to_cdn(files)
+	#update_link_to_cdn(files)
+	update_script_to_static(files)
+	update_link_to_static(files)
 	

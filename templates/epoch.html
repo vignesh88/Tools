@@ -1,16 +1,16 @@
 {% load static %}
 
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/js/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/js/moment-timezone.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/js/moment-timezone-with-data-2012-2022.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/js/chosen.jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/js/jstz.min.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/css/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/js/bootstrap-datetimepicker.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/js/epoch.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/css/epoch.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/css/bootstrap-select.min.css" rel="stylesheet"/>
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/epoch/js/bootstrap-select.min.js"></script>
+<script src="{% static 'epoch/js/moment.min.js' %}"></script>
+<script src="{% static 'epoch/js/moment-timezone.js' %}"></script>
+<script src="{% static 'epoch/js/moment-timezone-with-data-2012-2022.js' %}"></script>
+<script src="{% static 'epoch/js/chosen.jquery.js' %}"></script>
+<script src="{% static 'epoch/js/jstz.min.js' %}"></script>
+<link href="{% static 'epoch/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet"/>
+<script src="{% static 'epoch/js/bootstrap-datetimepicker.min.js' %}"></script>
+<script src="{% static 'epoch/js/epoch.js' %}"></script>
+<link href="{% static 'epoch/css/epoch.css' %}" rel="stylesheet"/>
+<link href="{% static 'epoch/css/bootstrap-select.min.css' %}" rel="stylesheet"/>
+<script src="{% static 'epoch/js/bootstrap-select.min.js' %}"></script>
 <div class="container-fluid" id="slow_loading">
 <div class="container_1">
 <h2 class="title" style="color:#6C757D">Epoch converter</h2>

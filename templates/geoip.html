@@ -1,7 +1,7 @@
 {% load static %}
 
-<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/geoip/js/geoip.js"></script>
-<link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/geoip/css/geoip.css" rel="stylesheet"/>
+<script src="{% static 'geoip/js/geoip.js' %}"></script>
+<link href="{% static 'geoip/css/geoip.css' %}" rel="stylesheet"/>
 <!--
   <script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/geoip/js/geoip.js"></script>
   <link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/eoip/css/geoip.css" rel="stylesheet">
