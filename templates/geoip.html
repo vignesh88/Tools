@@ -1,23 +1,17 @@
 {% load static %}
 
-<script src="{% static 'geoip/js/geoip.js' %}"></script>
-<link href="{% static 'geoip/css/geoip.css' %}" rel="stylesheet">
-
+<script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/geoip/js/geoip.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/geoip/css/geoip.css" rel="stylesheet"/>
 <!--
   <script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/geoip/js/geoip.js"></script>
   <link href="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/eoip/css/geoip.css" rel="stylesheet">
 -->
-
-<div  class="container-fluid" id="slow_loading">
-  
-  <div class="container_1">
-    <h2 style="color:#6C757D" class="title">Your public IP address</h2>
-    <div id="ip_result_box" class="ip_result_box ip_result_box_shadow">
-      <span id="ip_result" class="ip_result">{{ var_geoip_ip}}</span>  
-
-    </div>
-
-  </div>
-  <footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color: #E81224;"></span> by <a href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta"> Vikki.</a></footer>
+<div class="container-fluid" id="slow_loading">
+<div class="container_1">
+<h2 class="title" style="color:#6C757D">Your public IP address</h2>
+<div class="ip_result_box ip_result_box_shadow" id="ip_result_box">
+<span class="ip_result" id="ip_result">{{ var_geoip_ip}}</span>
+</div>
+</div>
+<footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color: #E81224;"></span> by <a href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta"> Vikki.</a></footer>
 </div><!-- /container -->
-
