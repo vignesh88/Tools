@@ -9,8 +9,6 @@ cdn_base_url = "https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/"
 static_base_url_1 = "{% static '"
 static_base_url_2 = "' %}"
 
-
-
 def update_script_to_cdn(files):
 	source = source_folder + files + ".html"
 	#destination = destination_folder + files + "-cdn" + ".html"
