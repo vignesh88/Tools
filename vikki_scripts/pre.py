@@ -5,8 +5,6 @@ import tkinter as tk
 from tkinter import ttk
 import io
 
-
-
 # main application shows:
 # label Loading..
 # label which configure values when file is downloading
@@ -15,13 +13,10 @@ class MainApplication(tk.Frame):
     def __init__(self, master=None, *args, **kwargs):
         tk.Frame.__init__(self, master)
         self.master = master
-
         self.master.grid_rowconfigure(0, weight=0)
         self.master.grid_columnconfigure(0, weight=1)
-
         self.youtubeEntry = "https://www.youtube.com/watch?v=3-Xq_Zz3nPA"
         self.FolderLoacation = "/home/vikki/Downloads/blog/"
-
         # pytube
         self.yt = YouTube(self.youtubeEntry)
         yt_title = self.yt.title
@@ -31,27 +26,20 @@ class MainApplication(tk.Frame):
         yt_title = yt_title.replace('.', '_')
         yt_title = yt_title.replace('(', '-')
         self.yt_title = yt_title.replace(')', '-')
-
         #video_type = self.yt.streams.filter(only_audio = True).first()
-
         # file size of a file
         #self.MaxfileSize = video_type.filesize
-
         # Loading label
         #self.loadingLabel = ttk.Label(self.master, text="Downloading...", font=("Agency FB", 30))
         #self.loadingLabel.grid(pady=(100,0))
-
         # loading precent label which must show % downloaded
         self.loadingPercent = tk.Label(self.master, text="0", fg="green", font=("Agency FB", 30))
         self.loadingPercent.grid(pady=(30,30))
-
         # indeterminate progress bar
         self.progressbar = ttk.Progressbar(self.master, orient="horizontal", length=500, mode='indeterminate')
         self.progressbar.grid(pady=(50,0))
         self.progressbar.start()
-
         threading.Thread(target=self.yt.register_on_progress_callback(self.show_progress_bar)).start()
-
         # call Download file func
         threading.Thread(target=self.DownloadFile).start()
 
@@ -61,7 +49,6 @@ class MainApplication(tk.Frame):
         self.loadingLabel = ttk.Label(self.master, text="Downloading Video...", font=("Agency FB", 30))
         self.loadingLabel.grid(pady=(100, 0))
         self.yt.streams.filter(file_extension='mp4', resolution="1080p").first().download(output_path=self.FolderLoacation, filename=self.yt_title, filename_prefix="video_")
-
         file_type = self.yt.streams.filter(only_audio=True, file_extension='mp4').first()
         self.MaxfileSize = file_type.filesize
         self.loadingLabel = ttk.Label(self.master, text="Downloading Audio...", font=("Agency FB", 30))
@@ -79,7 +66,6 @@ class MainApplication(tk.Frame):
         file_name = file_name.split('_')
         file_name = file_name[0]
         #print(file_name)
-
         #print(file_handle.read(20))
         #text = str(text)
         #print(text)
@@ -87,12 +73,9 @@ class MainApplication(tk.Frame):
 '''
         if 'video' in file_name:
             self.loadingLabel = ttk.Label(self.master, text="Downloading Video...", font=("Agency FB", 30))
-            
         else:
             self.loadingLabel = ttk.Label(self.master, text="Downloading Audio...", font=("Agency FB", 30))
 '''
-
-
         # loadingPercent label configure value %
 
 
