@@ -1,87 +1,89 @@
 .avatar {
-    position: relative;
-    vertical-align: middle;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    z-index: 501
-  }
+  position: relative;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 501
+}
 
-  #page-content-wrapper {
-    /* background-color: #F6F6F7; */
-    background-color: #E9E9DA;
-  }
-  button {
-    border: 0;
-    outline: 0;
-  }
-  .container_1 {
-    margin: 20px 0;
-    /* width: 400px; */
-    width: 100%;
-    /* height: 600px; */
-    height: 100%;
-    padding: 10px 25px;
-    /* background: #E8E8E8; */
-    background: #E9E9DA;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
-    /* font-family: "Montserrat"; */
-  }
-  
-  .container_1 h2.title {
-    font-size: 1.75rem;
-    margin: 10px -5px;
-    margin-bottom: 30px;
-    color: #333333;
-    text-align:center;
-  }
+#page-content-wrapper {
+  /* background-color: #F6F6F7; */
+  background-color: #E9E9DA;
+}
 
-  .container_1 h3.title {
-    font-size: 1.00rem;
-    margin: 10px -5px;
-    margin-bottom: 30px;
-    color: #333333;
-    text-align:center;
-  }
+button {
+  border: 0;
+  outline: 0;
+}
 
-  .tools-field-title {
-    position: relative;
-    top: -10px;
-    left: 8px;
-    transform: translateY(-60%);
-    font-weight: 900;
-    color: #007BFE;
-    text-transform: uppercase;
-    font-size: 0.65rem;
-    pointer-events: none;
-    user-select: none;
-  }
+.container_1 {
+  margin: 20px 0;
+  /* width: 400px; */
+  width: 100%;
+  /* height: 600px; */
+  height: 100%;
+  padding: 10px 25px;
+  /* background: #E8E8E8; */
+  background: #E9E9DA;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
+  /* font-family: "Montserrat"; */
+}
 
-  .show-copied {
-    font-size: .8em;
-    display: none;
-    text-align: center;
-    padding: .5em;
-    border-radius: 3px;
-    position: relative;
-    bottom: -5px;   
-    transform: translateX(-50%)
-  }
-  
+.container_1 h2.title {
+  font-size: 1.75rem;
+  margin: 10px -5px;
+  margin-bottom: 30px;
+  color: #333333;
+  text-align: center;
+}
 
-  footer {
-    background: #add8e6;
-    text-align: center;
-    padding: 8px;
-    color: #333;
-    position: relative;
-    /* background-color: #efefef; */
-    background-color: #E9E9DA;
-    text-align: center
-  }
+.container_1 h3.title {
+  font-size: 1.00rem;
+  margin: 10px -5px;
+  margin-bottom: 30px;
+  color: #333333;
+  text-align: center;
+}
 
-  
+.tools-field-title {
+  position: relative;
+  top: -10px;
+  left: 8px;
+  transform: translateY(-60%);
+  font-weight: 900;
+  color: #007BFE;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.show-copied {
+  font-size: .8em;
+  display: none;
+  text-align: center;
+  padding: .5em;
+  border-radius: 3px;
+  position: relative;
+  bottom: -5px;
+  transform: translateX(-50%)
+}
+
+
+footer {
+  background: #add8e6;
+  text-align: center;
+  padding: 8px;
+  color: #333;
+  position: relative;
+  /* background-color: #efefef; */
+  background-color: #E9E9DA;
+  text-align: center
+}
+
+
 /* START customization for darkmode */
 .darkmode-layer,
 .darkmode-toggle {
@@ -92,17 +94,20 @@
 .navbar-custom {
   background-color: #D7D6C5;
 }
+
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
   /* color: rgba(255,255,255,.8); */
   color: #333;
 }
+
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
   /* color: rgba(255,255,255,.5); */
   color: #333;
 }
+
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:focus .nav-link,
@@ -110,29 +115,38 @@
   /* color: #ffffff; */
   color: #333;
 }
-.navbar-custom .dropdown-menu{
+
+.navbar-custom .dropdown-menu {
   background-color: #D7D6C5;
 }
-.navbar-custom .dropdown-menu{
+
+.navbar-custom .dropdown-menu {
   background-color: #D7D6C5;
   z-index: 499;
 }
-.navbar-custom .dropdown-item:hover{
+
+.navbar-custom .dropdown-item:hover {
   background-color: #EAEADC;
 }
+
 .bg-custom {
   background-color: #E1E1CF;
 }
+
 .bg-custom:hover {
-  background-color: #D7D6C5; 
+  background-color: #D7D6C5;
 }
+
 #tools_search {
   background-color: #EAEADC;
 }
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(90, 95, 99, 0.5)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
-.navbar-toggler { 
+
+.navbar-toggler {
   border-color: #5A5F63 !important;
-} 
+}
+
 /* END customization for darkmode */
