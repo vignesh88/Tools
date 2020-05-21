@@ -1,0 +1,50 @@
+#vikki_input_box input {
+    background: #EAEADC;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    border: 1px solid #DEDDCF
+  }
+  
+  #output_date_1,
+  #output_epoch_1 {
+    background: #EAEADC;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    border: 1px solid #DEDDCF
+  }
+  
+  
+  /* START customization for dark theme */
+  .bootstrap-datetimepicker-widget {
+    background-color: #E9E9DA;
+    z-index: 499;
+  }
+  
+  .bootstrap-select.btn-group .dropdown-menu li a:hover {
+    color: rgb(196, 19, 19) !important;
+    background: #bf5279 !important;
+  
+  }
+  
+  .bootstrap-select .dropdown-menu {
+    background-color: #E9E9DA;
+    z-index: 499;
+  
+  }
+  
+  .bootstrap-select .dropdown-item:hover {
+    background-color: #D7D6C5;
+    z-index: 499;
+  
+  }
+  
+  .bootstrap-select .dropdown-item.active.selected {
+    background-color: #D7D6C5;
+    color: #333;
+    z-index: 499;
+  
+  }
+  
+  .form-control input {
+    background-color: #EAEADC !important;
+  }
+  
+  /* END customization for dark theme */

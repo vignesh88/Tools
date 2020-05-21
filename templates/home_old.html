@@ -1,0 +1,93 @@
+{% load static %}
+
+<script>
+  var options = {
+    time: '0.1s', // default: '0.3s'
+    mixColor: '#fff', // default: '#fff'
+    backgroundColor: '#E9E9DA', // default: '#fff'
+    buttonColorDark: '#100f2c', // default: '#100f2c'
+    buttonColorLight: '#fff', // default: '#fff'
+    saveInCookies: false, // default: true,
+    label: '🌓', // default: ''
+    autoMatchOsTheme: true // default: true
+  }
+  const darkmode = new Darkmode(options);
+  darkmode.showWidget();
+</script>
+<div class="d-flex " id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-custom border-right" id="sidebar-wrapper" >
+    <div class="sidebar-heading">Vikki's tools</div>
+    <div class="list-group list-group-flush">
+      <a href="base64.html"  class="list-group-item list-group-item-action bg-custom">Base64</a>
+      <!-- <a href="#" class="list-group-item list-group-item-action bg-light">SHA54decrypter</a> --> 
+      <a href="password_generator.html" class="list-group-item list-group-item-action bg-custom">Password generator</a>
+      <a href="geoip.html" class="list-group-item list-group-item-action bg-custom">What is my IP</a>
+      <a href="epoch.html" class="list-group-item list-group-item-action bg-custom">Epoch converter</a>
+      
+    </div>
+  </div><!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-custom  border-bottom">
+      <button class="btn btn-dark"   id="menu-toggle">Vikki's tools</button> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="true"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <form class="form-inline"><input id="tools_search" class="form-control" type="search" placeholder="Search"
+              aria-label="Search"></form>
+          <li class="nav-item active"><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
+          <!--   
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.vikki.in">Blog</a>
+          </li>
+          -->
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Others</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"><a class="dropdown-item"
+                href="https://www.vikki.in/about-me/">About</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="https://www.vikki.in">Vikki's Blog</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta"><img
+                src="{% static 'general/img/vignesh_ragupathy.png' %}" alt="Avatar" class="avatar"></a></li>
+        </ul>
+      </div>
+    </nav>{% if var_page_to_load == "general" %} {% include 'general.html' %} 
+    {% elif var_page_to_load == "base64" %} {% include 'base64.html' %}
+    {% elif var_page_to_load == "password_generator" %} {% include 'password_generator.html' %} 
+    {% elif var_page_to_load == "geoip" %} {% include 'geoip.html' %} 
+    {% elif var_page_to_load == "epoch" %} {% include 'epoch.html' %}
+    {% else %} {% include 'sha64.html' %} {% endif %}
+  </div>
+</div><!-- /#page-content-wrapper -->
+<!-- /#wrapper -->
+<!-- Menu Toggle Script -->
+
+<script>
+  $("#menu-toggle").click(function (e) {
+    e.preventDefault(), $("#wrapper").toggleClass("toggled")
+  })
+</script>
+<script>
+  superplaceholder({
+    el: document.getElementById("tools_search"),
+    sentences: ["password generator", "base64", "what is my IP ?"],
+    options: {
+      letterDelay: 100,
+      sentenceDelay: 1e3,
+      startOnFocus: !0,
+      loop: !1,
+      shuffle: !1,
+      showCursor: !0,
+      cursor: "|",
+      onFocusAction: superplaceholder.Actions.START
+    }
+  })
+</script>
