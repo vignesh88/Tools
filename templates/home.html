@@ -1,16 +1,24 @@
-{% load static %}<div id="navbar" class="nav"><input type="checkbox" id="nav-check">
-  <div class="nav-header">
-    <div class="nav-title"><a href="/">Epoch converter</a></div>
+{% load static %}
+<link href="{% static 'common/css/mdb_light.css' %}" rel="stylesheet"
+  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+<link href="{% static 'common/css/mdb_dark.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<nav class="navbar navbar-light navbar-2 vikki_custom_color"><a class="navbar-brand" href="/">Vikki's tools</a> <button
+    class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span
+      class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="base64.html">Base64</a></li>
+      <li class="nav-item"><a class="nav-link" href="password_generator.html">Password generator</a></li>
+      <li class="nav-item"><a class="nav-link" href="geoip.html">What is my IP</a></li>
+      <li class="nav-item"><a class="nav-link" href="epoch.html">Epoch converter</a></li>
+      <li class="nav-item">
+        <dark-mode-toggle id="dark-mode-toggle-9" permanent="true"></dark-mode-toggle>
+      </li>
+    </ul>
   </div>
-  <div class="nav-btn"><label for="nav-check"><span></span> <span></span> <span></span></label></div>
-  <div class="nav-links"><a href="base64.html">Base64</a> <a href="password_generator.html">Password Generator</a> <a
-      href="geoip.html">What is my IP</a> <a href="epoch.html">Epoch converter</a> <a href="https://www.vikki.in"
-      target="_blank">Blog</a>
-    <dark-mode-toggle id="dark-mode-toggle-9" ></dark-mode-toggle>
-  </div>
-</div>
-<div id="page-content-wrapper">{% if var_page_to_load == "general" %} {% include 'general.html' %}
-  {% elif var_page_to_load == "base64" %} {% include 'base64.html' %}
-  {% elif var_page_to_load == "password_generator" %} {% include 'password_generator.html' %}
-  {% elif var_page_to_load == "geoip" %} {% include 'geoip.html' %} {% elif var_page_to_load == "epoch" %}
-  {% include 'epoch.html' %} {% else %} {% include 'general.html' %} {% endif %}</div>
+</nav>{% if var_page_to_load == "general" %} {% include 'general.html' %} {% elif var_page_to_load == "base64" %}
+{% include 'base64.html' %} {% elif var_page_to_load == "password_generator" %} {% include 'password_generator.html' %}
+{% elif var_page_to_load == "geoip" %} {% include 'geoip.html' %} {% elif var_page_to_load == "epoch" %}
+{% include 'epoch.html' %} {% else %} {% include 'general.html' %} {% endif %}

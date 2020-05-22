@@ -17,7 +17,7 @@
         <p></p>
         <div class="form-group"><label for="inputdefault"></label> <span class="tools-field-title">Results</span>
           <div id="vikki_input_box" class="mb-3"><input
-              onclick="copyToClipboard(results,show_copied)" class="form-control" type="text"
+              onclick="copyToClipboard('results', '#show_copied')" class="form-control" type="text"
               id="results" placeholder="Converted results appears here..." readonly> <span id="show_copied"
               class="show-copied">copied successfuly!</span></div>
         </div><br><button onclick="base64_convert()" type="button"
@@ -25,8 +25,7 @@
       </div>
     </form>
     <footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color:#e81224"></span> by <a
-      href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
+        href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
   </div>
-  
 </div>
 <script src="{% static 'base64/js/base64.js' %}"></script>

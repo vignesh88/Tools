@@ -1,4 +1,3 @@
-
 .ip_result_box {
   width: 100%;
   min-height: 80px;
@@ -6,8 +5,8 @@
   position: relative;
   text-align: center;
   border-radius: 3px;
-   /* background: #fff; */
-   background:  #ffffff;
+  /* background: #fff; */
+  background: #ffffff;
   letter-spacing: 2px;
   transition: all ease-in 0.3s;
   border: 1px solid #DEDDCF
