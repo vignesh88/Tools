@@ -12749,6 +12749,10 @@ ul.stepper li.completed a .label {
     
 }
 
+
 .navbar.navbar-2 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
-    }
+   /* background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff'); */
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger7.svg?color=FF8401');
+
+    } 
+

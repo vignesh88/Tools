@@ -31,7 +31,7 @@ body {
   font-size: 1.75rem;
   margin: 10px -5px;
   margin-bottom: 30px;
-  color: #333;
+  color: #6c757d;
   text-align: center
 }
 
@@ -49,7 +49,7 @@ body {
   left: 8px;
   transform: translateY(-60%);
   font-weight: 900;
-  color: #007bfe;
+  color: #FF8401;
   text-transform: uppercase;
   font-size: .65rem;
   pointer-events: none;

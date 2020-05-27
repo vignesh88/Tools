@@ -21,14 +21,14 @@
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
 .show>.btn-secondary.dropdown-toggle {
-  color: #6c757d;
-  background-color: #1c1cb3 !important;
+  color: #161625;
+  background-color: #03DAC6 !important;
 
 
 }
 
 .btn-secondary {
-  color: #6c757d;
-  background-color: #161625 !important;
+  color: #161625;
+  background-color: #A59D97 !important;
 
 }
