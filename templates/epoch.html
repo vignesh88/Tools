@@ -1,6 +1,4 @@
-{% load static %}
-
-<script src="{% static 'epoch/js/moment.min.js' %}"></script>
+{% load static %}<script src="{% static 'epoch/js/moment.min.js' %}"></script>
 <script src="{% static 'epoch/js/moment-timezone.js' %}"></script>
 <script src="{% static 'epoch/js/moment-timezone-with-data-2012-2022.js' %}"></script>
 <script src="{% static 'epoch/js/chosen.jquery.js' %}"></script>
@@ -8,75 +6,51 @@
 <link href="{% static 'epoch/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
 <script src="{% static 'epoch/js/bootstrap-datetimepicker.min.js' %}"></script>
 <script src="{% static 'epoch/js/epoch.js' %}"></script>
-<link href="{% static 'epoch/css/epoch.css' %}" rel="stylesheet">
+<link href="{% static 'epoch/css/epoch_light.css' %}" rel="stylesheet"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+<link href="{% static 'epoch/css/epoch_dark.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
 <link href="{% static 'epoch/css/bootstrap-select.min.css' %}" rel="stylesheet">
 <script src="{% static 'epoch/js/bootstrap-select.min.js' %}"></script>
-
-
-
 <div class="container-fluid" id="slow_loading">
-    
     <div class="container_1">
-        <h2 style="color:#6C757D" class="title">Epoch converter</h2>
-
-        
-        <span class=" tools-field-title">Convert to datetime</span>
-        <br>
+        <h2 style="color:#6c757d" class="title">Epoch converter</h2><span class="tools-field-title">Convert to
+            datetime</span><br>
         <div>
             <div class="container">
                 <div class="row">
-                    <div id="vikki_input_box" class="col-sm-2">
-                        <input class="form-control" type="text" id="enter_epoch" value="1" onkeyup="process_epoch()">
+                    <div id="vikki_input_box" class="col-sm-2"><input class="form-control" type="text" id="enter_epoch"
+                            value="1" onkeyup="process_epoch()"></div>
+                    <div class="col-sm-3"><select data-style="btn-secondary" class="form-control selectpicker"
+                            data-live-search="true" onchange="process_epoch()" id="dropdown_selector_epoch"></select>
                     </div>
-                    <div class="col-sm-3">
-                        <select data-style="btn-secondary" class=" form-control selectpicker" data-live-search="true" onchange="process_epoch()" id="dropdown_selector_epoch">
-                        </select></div>
-                        <div class="col-md-7">
-                        <div class="form-control " id="output_epoch_1" onclick="copyToClipboard('output_epoch_1','#show_copied_date')"></div>
+                    <div class="col-md-7">
+                        <div class="form-control" id="output_epoch_1"
+                            onclick="copyToClipboard('output_epoch_1','show_copied_date')"></div>
                     </div>
-                    <div>
-                    <span id="show_copied_date" class="show-copied"> copied successfuly!</span>
-                </div>
+                    <div><span id="show_copied_date" class="show-copied">copied successfuly!</span></div>
                 </div>
             </div>
-        </div>
-<br>
-<br>
-<span class=" tools-field-title">Convert to Epoch </span>
-        <br>
-
-
+        </div><br><br><span class="tools-field-title">Convert to Epoch</span><br>
         <div>
             <div class="container">
                 <div class="row">
-                    <div id="vikki_input_box" class="col-sm-4">
-                        <input class=" form-control" type="text" id="datetimepicker1" name="datetimepicker1">
+                    <div id="vikki_input_box" class="col-sm-4"><input class="form-control" type="text"
+                            id="datetimepicker1" name="datetimepicker1"></div>
+                    <div class="col-sm-3"><select data-style="btn-secondary" class="form-control selectpicker"
+                            data-live-search="true" id="dropdown_selector_date" onchange="process_date()"></select>
                     </div>
-                    <div class="col-sm-3">
-                    <select data-style="btn-secondary" class="form-control selectpicker" data-live-search="true" id="dropdown_selector_date"
-                    onchange="process_date()"> </select>
+                    <div class="col-sm-4">
+                        <div class="form-control" id="output_date_1"
+                            onclick="copyToClipboard('output_date_1','#show_copied_epoch&')"></div>
+                    </div>
+                    <div><span id="show_copied_epoch" class="show-copied">copied successfuly!</span></div>
                 </div>
-                <div  class="col-sm-4">
-                    <div class="form-control " id="output_date_1" onclick="copyToClipboard('output_date_1','#show_copied_epoch')"></div>
-                       </div>
-                <div >
-                <span id="show_copied_epoch" class="show-copied"> copied successfuly!</span>
             </div>
-                </div>
-                
-            </div>
-            
-          
-        </div>
-        <br>
-
-
-
-
-
+        </div><br>
+        <footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color:#e81224"></span> by <a
+                href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
     </div>
-    <footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color: #E81224;"></span> by <a href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta"> Vikki.</a></footer>
 </div><!-- /container -->
 <script type="text/javascript">
-    onload_epoch();
+    onload_epoch()
 </script>

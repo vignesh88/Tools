@@ -1,0 +1,28 @@
+.ip_result_box {
+  width: 100%;
+  min-height: 80px;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #1E1E30;
+  letter-spacing: 2px;
+  transition: all ease-in 0.3s;
+  border: 1px solid #161625
+}
+
+.ip_result_box .ip_result {
+  width: 70%;
+  padding: 1.5em 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  word-wrap: break-word;
+  font-size: x-large;
+}
+
+.ip_result_box_shadow {
+  box-shadow: 0 14px 28px rgba(138, 138, 138, 0.25), 0 10px 10px rgba(150, 150, 150, 0.22);
+}

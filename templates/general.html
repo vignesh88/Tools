@@ -1,16 +1,16 @@
 {% load static %}
-<link href="{% static 'general/css/general.css' %}" rel="stylesheet">
+<link href="{% static 'general/css/general_light.css' %}" rel="stylesheet"
+  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+<link href="{% static 'general/css/general_dark.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
 <div class="container-fluid" id="slow_loading_general"><br>
-  <div style="text-align:center" id="tools_links"><a href="Javascript:void(0);" id="pass_gen" class="button_tools_links"
-      style="background-color:#5a5f63">Password Generator</a> <a href="Javascript:void(0);" id="base_64"
-      class="button_tools_links" style="background-color:#5a5f63">Base64 encode/decode</a> <a href="Javascript:void(0);"
-      id="geo_ip" class="button_tools_links" style="background-color:#5a5f63">What is my IP</a> <a
-      href="Javascript:void(0);" id="epoch" class="button_tools_links" style="background-color:#5a5f63">Epoch
-      converter</a></div>
-  <div id="div1"></div>
-</div><!-- /container -->
+  <h2 style="color:#6c757d; text-align: center;" class="title">Vikki's tools</h2>
+  <form class="searchbox" action=""><input type="search" placeholder="">
+    <ul class="suggestions">
+      <li><a href="base64.html">Base64 Encoder and Decoder</a></li>
+      <li><a href="password_generator.html">Password generator</a></li>
+      <li><a href="geoip.html">What is my IP</a></li>
+      <li><a href="epoch.html">Epoch converter</a></li>
+    </ul>
+  </form>
+</div>
 <script src="{% static 'general/js/general.js' %}"></script>
-<!--
-  <script src="{% static 'general/js/general.js' %}"></script>
-  <script src="https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/general/js/general.js"></script>
--->
