@@ -1,0 +1,23 @@
+{
+  "name": "vikki-tools",
+  "version": "1.0.3",
+  "description": "Libraries for https://tools.vikki.in",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vignesh88/tools.git"
+  },
+  "keywords": [
+    "vikki",
+    "tools"
+  ],
+  "author": "Vignesh Ragupathy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vignesh88/tools/issues"
+  },
+  "homepage": "https://github.com/vignesh88/tools#readme"
+}

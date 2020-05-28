@@ -132,5 +132,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static_files')
 
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'prod_static_files')
+STATIC_ROOT = os.path.join(BASE_DIR, 'ntpm/dist')
 #GEOIP_PATH = os.path.join(BASE_DIR, 'app_geoip/static_files/geoip/db')

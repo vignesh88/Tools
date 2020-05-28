@@ -21,7 +21,7 @@ Out[2]: '555%s(xc)a4-^x*3ipd@_@z81n_mry#flyx9@boy0b@jeg_4ao'
 
 ### Alternate installation using docker
 ```
-#sudo docker run -d -p 8086:8086 --name tools.vikki.in vignesh88/tools python tools/manage.py runserver 0.0.0.0:8086
+#sudo docker run -d -p 8086:8086 --name vikki_tools vignesh88/tools python epoch/manage.py runserver 0.0.0.0:8086
 ```
 > Open your browser and view the application at [http://localhost:8086](http://localhost:8086)
 
