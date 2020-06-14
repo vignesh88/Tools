@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('app_password_generator.urls')),
     path('', include('app_geoip.urls')),
     path('', include('app_epoch.urls')),
+    path('', include('app_shorty.urls')),
     path('admin/', admin.site.urls),
 ]

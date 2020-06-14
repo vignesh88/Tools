@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="author" content="Vignesh Ragupathy">
+  <meta name="keywords" content="vikki, vignesh ragupathy, vikki's tools">
+  <meta name="description" content="Opensource tools developed by Vignesh Ragupathy">
+  <title>Vikki's tools</title>
+  <link href="{% static 'common/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="{% static 'general/img/favicon.ico' %}">
+  <script src="{% static 'common/js/jquery.min.js' %}"></script>
+  <script src="{% static 'common/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'common/js/common.js' %}"></script>
+  <script src="{% static 'common/js/superplaceholder.js' %}"></script>
+  <script src="{% static 'common/js/iconify.min.js' %}"></script>
+  <link rel="stylesheet" href="{% static 'common/css/light.css' %}"
+    media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+  <link rel="stylesheet" href="{% static 'common/css/dark.css' %}" media="(prefers-color-scheme: dark)">
+  <script type="module" src="{% static 'common/js/dark-mode-toggle.min.mjs' %}"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75997179-2"></script>
+  <script>
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-75997179-2")
+  </script>
+</head>
+
+<body>
+  <link href="{% static 'common/css/mdb_light.css' %}" rel="stylesheet"
+  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+<link href="{% static 'common/css/mdb_dark.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<nav class="navbar navbar-light navbar-2 vikki_custom_color"><a class="navbar-brand" href="/">Vikki's tools</a> <button
+    class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span
+      class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"><a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="base64.html">Base64</a></li>
+      <li class="nav-item"><a class="nav-link" href="password_generator.html">Password generator</a></li>
+      <li class="nav-item"><a class="nav-link" href="geoip.html">What is my IP</a></li>
+      <li class="nav-item"><a class="nav-link" href="epoch.html">Epoch converter</a></li>
+      <li class="nav-item"><a class="nav-link" href="shorty">URL Shortner</a></li>
+      <li class="nav-item">
+        <dark-mode-toggle id="dark-mode-toggle-9" permanent="true"></dark-mode-toggle>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <link href="{% static 'shorty/css/shorty.css' %}" rel="stylesheet"
+  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+<link href="{% static 'shorty/css/shorty.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<div class="container-fluid" id="slow_loading">
+  <div class="container_1">
+    <h2 class="title">Vikki's URL Shortener(development in-progress)</h2>
+    
+        {% block content %}
+        {% endblock %}
+
+
+
+    <footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color:#e81224"></span> by <a
+        href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
+  </div>
+</div>
+
+
+</body>
+
+</html>
+
+
+
+
