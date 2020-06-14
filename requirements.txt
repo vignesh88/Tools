@@ -3,3 +3,4 @@ psycopg2
 #geoip2
 nltk
 python-decouple
+hashids
