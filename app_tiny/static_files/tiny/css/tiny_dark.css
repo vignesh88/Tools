@@ -1,0 +1,43 @@
+#vikki_input_box input {
+  background: #1E1E30;
+  color: #6c757d;
+  border: 1px solid #1E1E30
+}
+
+#vikki_input_box input:focus {
+  outline: 2px solid #026FE6;
+  /* oranges! yey */
+
+}
+
+.form-control {
+  width: 60% !important;
+}
+
+#vikki_output_box input {
+  background: #1E1E30;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22); 
+  border: 1px solid #DEDDCF
+}
+
+/*
+  .btn-secondary {
+    color: #6C757D;
+    background-color: #414052;
+    border-color: #6c757d;
+}
+*/
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle {
+  color: #161625;
+  background-color: #03DAC6 !important;
+
+
+}
+
+.btn-secondary {
+  color: #161625;
+  background-color: #A59D97 !important;
+
+}

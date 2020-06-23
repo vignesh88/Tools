@@ -1,0 +1,55 @@
+{% load static %}
+<link href="{% static 'tiny/css/tiny_light.css' %}" rel="stylesheet"
+  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
+<link href="{% static 'tiny/css/tiny_dark.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<script src="{% static 'common/js/js.cookie.min.js' %}"></script>
+
+
+<div class="container-fluid" id="slow_loading">
+  <div class="container_1">
+
+    <h2 class="title">URL Shortner</h2>
+
+
+    <form id="url_submit_form" method="POST" action="/tiny">
+      {% csrf_token %}
+
+
+      <div class="control-group {% if error %}error{% endif %}">
+        <div class="row" id="vikki_input_box">
+          <input type="text" name="url" placeholder="Shorten your URL" value="{% if url %}{{ url }}{% endif %}"
+            id="url_input" class="form-control">
+          <button type="submit" class="btn btn-lg  btn-secondary">Shorten</button>
+        </div>
+    </form>
+    <br>
+    {% if error %}
+    <span class="help-inline">Please enter a valid URL</span>
+    {% endif %}
+    <!--
+                    {% if shorturl %}
+                        <h2>Success!</h2>
+                        <p>Shortened URL: <a href="{{ shorturl }}">{{ shorturl }}</a></p>
+                        <p>View statistics: <a href="{{ shorturl }}/stats">{{ shorturl }}/stats</a></p>
+                    {% endif %}
+                    -->
+    {% if shorturl %}
+       <div class="form-group"><span class="tools-field-title">Shortened URL:</span>
+      <div id="vikki_output_box" class="mb-3"><input
+        onclick="copyToClipboard('results_url', '#show_copied1')" class="form-control" type="text"
+        id="results_url" value={{ shorturl }} readonly> <span id="show_copied1"
+        class="show-copied">copied successfuly!</span></div>
+
+        <div class="form-group"><span class="tools-field-title">View statistics:</span>
+          <div id="vikki_output_box" class="mb-3"><input
+            onclick="copyToClipboard('results_stats', '#show_copied2')" class="form-control" type="text"
+            id="results_stats" value="{{ shorturl }}/stats" readonly> <span id="show_copied2"
+            class="show-copied">copied successfuly!</span></div>
+      {% endif %}
+
+      <br> <br>
+
+      <footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color:#e81224"></span> by <a
+          href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
+
+    </div>

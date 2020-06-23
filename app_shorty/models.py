@@ -9,6 +9,8 @@ hashids = Hashids()
 class Link(models.Model):
 	# Using this field is actually a Charfield but with a URL validator. AWESOME!
 	url = models.URLField()
+	clicks = models.IntegerField(default=0)
+	created_at = models.DateTimeField(auto_now_add=True)
 
 	def get_absolute_url(self):
 		return reverse("link_show", kwargs={"pk": self.pk})
