@@ -136,7 +136,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static_files')
 
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'ntpm/dist')
+STATIC_ROOT = os.path.join(BASE_DIR, 'npm/dist')
 #GEOIP_PATH = os.path.join(BASE_DIR, 'app_geoip/static_files/geoip/db')
 SITE_URL = "localhost:8000"
 TINY_URL = "s.vikki.in"

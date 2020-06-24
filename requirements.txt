@@ -4,3 +4,4 @@ psycopg2
 nltk
 python-decouple
 hashids
+bs4

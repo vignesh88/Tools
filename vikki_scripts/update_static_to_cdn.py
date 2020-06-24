@@ -1,11 +1,11 @@
 from bs4 import BeautifulSoup
 import re
 
-source_files = ['base', 'base64', 'epoch', 'general', 'geoip', 'home', 'password_generator']
+source_files = ['base', 'base64', 'epoch', 'general', 'geoip', 'home', 'password_generator', 'tiny', 'tiny_stats']
 #source_files = ['base-cdn', 'base64-cdn', 'epoch-cdn', 'general-cdn', 'geoip-cdn', 'home-cdn', 'password_generator-cdn']
-source_folder = "C:\\vikki\\github\\tools\\templates\\"
-destination_folder = "C:\\vikki\\github\\tools\\templates\\"
-cdn_base_url = "https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/"
+source_folder = "../templates/"
+destination_folder = "../templates/"
+cdn_base_url = "https://unpkg.com/vikki-tools@1.0.8/dist/"
 static_base_url_1 = "{% static '"
 static_base_url_2 = "' %}"
 
@@ -48,7 +48,7 @@ def update_script_to_static(files):
 		str_append = re.findall(r'"(.*?)"', str(script))
 		if str_append[0]:
 			current_value = script['src']
-			script['src'] = static_base_url_1 + str_append[0].split("https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/")[1] + static_base_url_2
+			script['src'] = static_base_url_1 + str_append[0].split(cdn_base_url)[1] + static_base_url_2
 			print("CDN URL {0} will be replaced by {1}".format(current_value, script['src']))
 	file_obj = open(source, "w+")
 	file_obj.write(str(soup))
@@ -63,7 +63,7 @@ def update_link_to_static(files):
 		str_append = re.findall(r'"(.*?)"', str(link))
 		if str_append[0]:
 			current_value = link['href']
-			link['href'] = static_base_url_1 + str_append[0].split("https://cdn.jsdelivr.net/gh/vignesh88/cdn/django/tools/")[1] + static_base_url_2
+			link['href'] = static_base_url_1 + str_append[0].split(cdn_base_url)[1] + static_base_url_2
 			print("CDN URL {0} will be replaced by {1}".format(current_value, link['href']))
 	file_obj = open(source, "w+")
 	file_obj.write(str(soup))

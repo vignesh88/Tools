@@ -3,6 +3,8 @@ from app_tiny import views
 
 urlpatterns = [
     re_path(r'^tiny$', views.home, name='home'),
+    re_path(r'^tiny/$', views.home, name='home'),
+    re_path(r'^tiny/tiny$', views.home, name='home'),
     re_path(r'^tiny/(?P<id>\w+)$', views.link, name="link"),
     re_path(r'^tiny/(?P<id>\w+)/stats$', views.stats, name="stats"),
 ]

@@ -1,6 +1,6 @@
 {
   "name": "vikki-tools",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "Libraries for https://tools.vikki.in",
   "main": "dist/index.js",
   "scripts": {
