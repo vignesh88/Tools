@@ -13,13 +13,16 @@ class Link(models.Model):
     link = models.URLField()
     # Store the total redirects here so we don't need to do a possibly expensive SUM query on HitsDatePoint
     hits = models.IntegerField(default=0)
+    creation_day = models.DateField(auto_now=True, db_index=True)
+
 
     def __repr__(self):
         return "<Link (Hits %s): %s>"%(self.hits, self.link)
+        #return(self.id,self.link,self.hits)
 
     def get_short_id(self):
         _id = self.id
-        print(_id)
+        print(_id, _id)
         '''
         digits = []
         while _id > 0:

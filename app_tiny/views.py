@@ -13,7 +13,6 @@ def home(request):
     url_error = False
     url_input = ""
     shortened_url = ""
-    
     if request.method == "POST":
         validator = URLValidator()
         try:
@@ -28,7 +27,15 @@ def home(request):
         if not url_error:
             link_db = models.Link()
             link_db.link = url_input
-            link_db.save()
+            #print(models.Link.objects.get(link = url_input))
+            try:
+                print("DB link id is {}".format(models.Link.objects.get(link = url_input).id))
+                link_db.id = models.Link.objects.get(link = url_input).id
+                link_db.hits = models.Link.objects.get(link = url_input).hits
+                link_db.creation_day = models.Link.objects.get(link = url_input).creation_day
+                link_db.save()
+            except models.Link.DoesNotExist:
+                link_db.save()
             #shortened_url_abs = request.build_absolute_uri(link_db.get_short_id())
             shortened_url = settings.TINY_URL + "/" + link_db.get_short_id()
             url_input = ""
