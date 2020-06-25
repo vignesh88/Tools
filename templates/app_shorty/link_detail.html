@@ -1,8 +1,0 @@
-{% extends 'shorty.html' %}
-{% block content %}
-	<p> Short Link: <a href="{{ object.short_url }}">{{ site_url }}{{ object.short_url }}</a></p>
-	<p> Original Link: {{ object.url }}</p>
-	<div class="back-button">
-		<a href="{% url 'home' %}">Back</a>
-	</div>
-{% endblock %}

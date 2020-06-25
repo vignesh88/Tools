@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'app_base64',
     'app_password_generator',
     'app_epoch',
-    'app_shorty',
     'app_tiny'
 ]
 
@@ -131,12 +130,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'app_password_generator/static_files'),
     os.path.join(BASE_DIR, 'app_geoip/static_files'),
     os.path.join(BASE_DIR, 'app_epoch/static_files'),
-    os.path.join(BASE_DIR, 'app_shorty/static_files'),
     os.path.join(BASE_DIR, 'app_tiny/static_files'),
     os.path.join(BASE_DIR, 'static_files')
 
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'npm/dist')
 #GEOIP_PATH = os.path.join(BASE_DIR, 'app_geoip/static_files/geoip/db')
-SITE_URL = "localhost:8000"
 TINY_URL = "s.vikki.in"
