@@ -1,13 +1,10 @@
 {% load static %}
-<link href="{% static 'geoip/css/geoip_light.css' %}" rel="stylesheet"
-  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
-<link href="{% static 'geoip/css/geoip_dark.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<link href="{% static 'geoip/css/geoip_light.css' %}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" rel="stylesheet"/>
+<link href="{% static 'geoip/css/geoip_dark.css' %}" media="(prefers-color-scheme: dark)" rel="stylesheet"/>
 <div class="container-fluid" id="slow_loading">
-  <div class="container_1">
-    <h2 class="title">Your public IP address</h2>
-    <div id="ip_result_box" class="ip_result_box ip_result_box_shadow"><span id="ip_result"
-        class="ip_result">{{ var_geoip_ip}}</span></div>
-    <footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color:#e81224"></span> by <a
-        href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
-  </div>
+<div class="container_1">
+<h2 class="title">Your public IP address</h2>
+<div class="ip_result_box ip_result_box_shadow" id="ip_result_box"><span class="ip_result" id="ip_result">{{ var_geoip_ip}}</span></div>
+<footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color:#e81224"></span> by <a href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
+</div>
 </div>

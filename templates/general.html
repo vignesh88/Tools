@@ -1,17 +1,16 @@
 {% load static %}
-<link href="{% static 'general/css/general_light.css' %}" rel="stylesheet"
-  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
-<link href="{% static 'general/css/general_dark.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
-<div class="container-fluid" id="slow_loading_general"><br>
-  <h2 style="color:#6c757d; text-align: center;" class="title">Vikki's tools</h2>
-  <form class="searchbox" action=""><input type="search" placeholder="">
-    <ul class="suggestions">
-      <li><a href="base64.html">Base64 Encoder and Decoder</a></li>
-      <li><a href="password_generator.html">Password generator</a></li>
-      <li><a href="geoip.html">What is my IP</a></li>
-      <li><a href="epoch.html">Epoch converter</a></li>
-      <li><a href="tiny">Tiny URL</a></li>
-    </ul>
-  </form>
+<link href="{% static 'general/css/general_light.css' %}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" rel="stylesheet"/>
+<link href="{% static 'general/css/general_dark.css' %}" media="(prefers-color-scheme: dark)" rel="stylesheet"/>
+<div class="container-fluid" id="slow_loading_general"><br/>
+<h2 class="title" style="color:#6c757d; text-align: center;">Vikki's tools</h2>
+<form action="" class="searchbox"><input placeholder="" type="search"/>
+<ul class="suggestions">
+<li><a href="base64.html">Base64 Encoder and Decoder</a></li>
+<li><a href="password_generator.html">Password generator</a></li>
+<li><a href="geoip.html">What is my IP</a></li>
+<li><a href="epoch.html">Epoch converter</a></li>
+<li><a href="tiny">Tiny URL</a></li>
+</ul>
+</form>
 </div>
 <script src="{% static 'general/js/general.js' %}"></script>

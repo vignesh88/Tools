@@ -1,31 +1,22 @@
 {% load static %}
-<link href="{% static 'base64/css/base64_light.css' %}" rel="stylesheet"
-  media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)">
-<link href="{% static 'base64/css/base64_dark.css' %}" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<link href="{% static 'base64/css/base64_light.css' %}" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" rel="stylesheet"/>
+<link href="{% static 'base64/css/base64_dark.css' %}" media="(prefers-color-scheme: dark)" rel="stylesheet"/>
 <script src="{% static 'common/js/js.cookie.min.js' %}"></script>
 <div class="container-fluid" id="slow_loading">
-  <div class="container_1">
-    <h2 class="title" style="color:#6c757d">Base64 Encode and Decode</h2>
-    <div class="container my-5"></div>
-    <form action="" method="post">{% csrf_token %}<div class="form-group"><span class="tools-field-title">Input</span>
-        <div id="vikki_input_box" class="mb-3"><input onkeypress="return base64_convert_enterkey(event)"
-            class="form-control" id="default_input_data" type="text" placeholder="Enter the data..."></div>
-        <p></p>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons"><label class="btn btn-secondary active"><input
-              type="radio" id="base64_encode" autocomplete="off" checked> ENCODE</label> <label
-            class="btn btn-secondary"><input type="radio" id="base64_decode" autocomplete="off"> DECODE</label></div>
-        <p></p>
-        <div class="form-group"><label for="inputdefault"></label> <span class="tools-field-title">Results</span>
-          <div id="vikki_input_box" class="mb-3"><input
-              onclick="copyToClipboard('results', '#show_copied')" class="form-control" type="text"
-              id="results" placeholder="Converted results appears here..." readonly> <span id="show_copied"
-              class="show-copied">copied successfuly!</span></div>
-        </div><br><button onclick="base64_convert()" type="button"
-          class="btn btn-lg btn-block btn-secondary">Convert</button>
-      </div>
-    </form>
-    <footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color:#e81224"></span> by <a
-        href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
-  </div>
+<div class="container_1">
+<h2 class="title" style="color:#6c757d">Base64 Encode and Decode</h2>
+<div class="container my-5"></div>
+<form action="" method="post">{% csrf_token %}<div class="form-group"><span class="tools-field-title">Input</span>
+<div class="mb-3" id="vikki_input_box"><input class="form-control" id="default_input_data" onkeypress="return base64_convert_enterkey(event)" placeholder="Enter the data..." type="text"/></div>
+<p></p>
+<div class="btn-group btn-group-toggle" data-toggle="buttons"><label class="btn btn-secondary active"><input autocomplete="off" checked="" id="base64_encode" type="radio"/> ENCODE</label> <label class="btn btn-secondary"><input autocomplete="off" id="base64_decode" type="radio"/> DECODE</label></div>
+<p></p>
+<div class="form-group"><label for="inputdefault"></label> <span class="tools-field-title">Results</span>
+<div class="mb-3" id="vikki_input_box"><input class="form-control" id="results" onclick="copyToClipboard('results', '#show_copied')" placeholder="Converted results appears here..." readonly="" type="text"/> <span class="show-copied" id="show_copied">copied successfuly!</span></div>
+</div><br/><button class="btn btn-lg btn-block btn-secondary" onclick="base64_convert()" type="button">Convert</button>
+</div>
+</form>
+<footer>Made with <span class="iconify icon:ion-heart icon-inline:false" style="color:#e81224"></span> by <a href="https://in.linkedin.com/in/vignesh88?trk=profile-badge-cta">Vikki.</a></footer>
+</div>
 </div>
 <script src="{% static 'base64/js/base64.js' %}"></script>
