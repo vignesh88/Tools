@@ -7,6 +7,7 @@
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m784955377-01831883b9c483057e013bf9)
 ![Uptime Robot ratio (30 days)](https://badgen.net/uptime-robot/month/m784955377-01831883b9c483057e013bf9)
 ![(last hour) response](https://badgen.net/uptime-robot/response/m784955377-01831883b9c483057e013bf9)
+[![DeepSource](https://deepsource.io/gh/vignesh88/tools.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/vignesh88/tools/?ref=repository-badge)
 
 ### To generate a new secreat key for django
 
