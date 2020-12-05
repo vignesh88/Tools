@@ -32,7 +32,7 @@ def main():
 	                  action='store', help="List of files to convert")
 	parser.add_option('-p', '--path', dest='source_path',
 	                  help="Path of html files")
-	(options, args) = parser.parse_args()
+	(options, _args) = parser.parse_args()
 
 	if options.target is None:
 		parser.print_help()
